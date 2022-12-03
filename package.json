@@ -14,18 +14,12 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "generate:css": "npx tailwindcss -o ./app/styles/tailwind.css",
-    "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
+    "lint:check": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
     "ntl:ci": "netlify dev",
     "start": "cross-env NODE_ENV=production netlify dev",
     "types:check": "tsc -b"
   },
   "prettier": {},
-  "eslintIgnore": [
-    "/netlify/functions/server",
-    "/node_modules",
-    "/public/build",
-    "/server/build"
-  ],
   "dependencies": {
     "@netlify/functions": "1.3.0",
     "@remix-run/netlify": "1.6.8",
