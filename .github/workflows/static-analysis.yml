@@ -6,6 +6,22 @@ on:
       - main
 
 jobs:
+  prettier-check:
+    name: Prettier check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          cache: "npm"
+          node-version-file: ".nvmrc"
+      - name: Install dependencies
+        run: npm install
+      - name: Prettier check
+        run: npm run format:check
+
   types-check:
     name: Typescript check
     runs-on: ubuntu-latest

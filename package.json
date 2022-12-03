@@ -12,6 +12,7 @@
     "dev:css": "npm run generate:css -- --watch",
     "dev:remix": "remix dev",
     "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "generate:css": "npx tailwindcss -o ./app/styles/tailwind.css",
     "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
     "ntl:ci": "netlify dev",
